@@ -13,6 +13,14 @@ stages {
             }
         }
     
+    stage('Test') {
+        steps {
+            script { 
+                 sh 'python /var/lib/jenkins/workspace//EE/pytest.py'
+                }
+            }
+        }
+    
     stage('Deploy CC') {
         steps {
             script { 
